@@ -23,6 +23,6 @@ content_for(Var)->
 				io:format("FN = ~s \n", [FN]),
 			{_, LN} = lists:keyfind(<<"lastname">>, 1, QsVals),
 				io:format("LN = ~s \n", [LN]),
-				
+			  	erlang:display(self()),
 				"Hello " ++erlang:binary_to_list(FN)++ " " ++erlang:binary_to_list(LN).
 
